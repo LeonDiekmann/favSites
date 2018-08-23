@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html>
+ <head>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no, minimum-scale=1, maximum-scale=1"/>
+  <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+  <meta charset="utf-8">
+
+  <title>Tapp</title>
+  
+  <link rel="stylesheet" href="https://chayns-res.tobit.com/API/V3.1/css/chayns.min.css">
+  <link rel="stylesheet" href="styles/style.css" >
+ </head>
+ <body>
+  <div class="tapp">
+   <div class="tapp__intro">
+    <h1>My Favorite Sites</h1>
+    <p>Hier kannst Du nach alle Deinen Lieblings Chayns Sites suchen.</p>
+   </div>
+    <div class="tapp__content">
+        
+        <div class="accordion accordion--flex new-group" data-group="groups">
+            <div class="accordion__head">
+                <span class="ellipsis accordion--trigger">
+                    <span>Site hinzufügen</span>
+                </span>
+                <div class="accordion-badge badge">
+                    <span class="icon--flex">
+                        <i class="fa fa-plus" >
+                        </i>
+                    </span>
+                </div>
+            </div>
+            <div class="accordion__body">
+              <div class="accordion__intro">Hier kannst Du deine eigene Chayns Site hinzufügen.</div>
+              <div class="accordion__content">
+                    <div class="input-group">
+                        <input id="formName" class="input" type="text" required>
+                        <label>Name*</label>
+                    </div>
+                    <div class="input-group">
+                        <input id="formAddress" class="input" type="text" required>
+                        <label>Adresse*</label>
+                    </div>
+                    <div class="input-group">
+                        <input id="formMail" class="input" type="text" required>
+                        <label>E-Mail*</label>
+                    </div>
+                    <textarea id="inputComment" class="input"  autogrow placeholder="Kommentar"></textarea>
+                    <div class="center mt-15" style="text-align: center">
+                        <button id="btnAdd" class="button  button--disabled">hinzufügen</button>
+                    </div>
+              </div>
+            </div>
+        </div>
+
+        <!-- <div class="search">
+            <div class="search__input-box input-group">
+                <input placeholder="     Suche" class="input" type="text" required value>
+                <label class="search__input-box__label">                   
+                       <label>
+                           <i class="fa fa-search">
+                           </i>
+                       </label>                    
+                </label>                
+            </div>
+        </div> -->
+
+        <div class="accordion accordion--open" style="overflow: hidden; margin-top: 30px;">
+            <div class="accordion__head">
+                
+                <div class="accordion--trigger accordion__head--search--wrapper" >
+                    <div class="accordion--trigger accordion__head--search">
+                        Sites
+                    </div>
+                </div>
+                    <div class="Suche Suche--accordion">
+                        <input id="accSearch" type="text" placeholder="Suche" value="Tobit">
+                        <label>
+                            <i class="fa fa-search">
+                            </i>
+                        </label>
+                    </div>                
+            </div>
+            <div class="accordion__body">
+                <div class="accordion__content">                        
+                </div>
+            </div>
+            <div id="accBody" class="accordion__body searchBody">
+                <div id="listContainer">
+                    <!-- <a target="_blank" href="https://de.tobit.software/">
+                        <div class="ListItem ListItem--clickable">
+                            <div class="ListItem__head">
+                                <div class="ListItem__Image">                                
+                                        <img src="images/Tobit.png">                                
+                                </div>
+                                <div class="ListItem__Title">
+                                    <p class="ListItem__Title--headline">
+                                            Tobit Software AG
+                                    </p>
+                                    <p class="ListItem__Title--description">
+                                            Die Verbindung von allem und allen.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                    <a target="_blank" href="https://bamboo-ahaus.de/">
+                        <div class="ListItem ListItem--clickable">
+                            <div class="ListItem__head">
+                                <div class="ListItem__Image">                                
+                                        <img src="images/Bamboo.png">                                
+                                </div>
+                                <div class="ListItem__Title">
+                                    <p class="ListItem__Title--headline">
+                                                BamBoo!
+                                    </p>
+                                    <p class="ListItem__Title--description">
+                                                Subtropisches Dschungelklima
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </a>                    -->
+                </div>
+                <div id="resultExpand" class="right">
+                        <a href="#">Mehr anzeigen</a>
+                    </div>
+            </div>
+        </div>
+
+        
+   </div>
+  </div>
+  <script src="https://chayns-res.tobit.com/API/V3.1/js/chayns.min.js"></script>
+  <script src="scripts/main.js"></script>
+ </body>
+</html>

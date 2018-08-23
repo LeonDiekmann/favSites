@@ -1,0 +1,289 @@
+html {
+    font-family: "Roboto";
+    font-size: 14px;
+    line-height: 1.65;
+    min-height: 100%;
+    -webkit-text-size-adjust: 100%;
+    -ms-text-size-adjust: 100%;
+    -webkit-font-smoothing: antialiased;
+    text-rendering: geometricPrecision;
+}
+
+#inputComment {
+    width: 100%;
+    margin-top: 10px;
+}
+
+
+
+.accordion__content .input-group {
+    margin-top: 10px;
+}
+
+
+
+.center {
+    margin-top: 15px;
+}
+
+
+/*Listitems*/
+
+
+.ListItem__Image img {
+    height: 40px;
+    width: 40px;
+}
+
+.ListItem.ListItem--clickable {
+    cursor: pointer;
+}
+
+.ListItem .ListItem__head {
+    padding: 0 9px;
+    display: flex;
+    align-items: center;
+    height: 64px;
+}
+
+.ListItem .ListItem__head .ListItem__Image {
+    height: 40px;
+    width: 40px;
+    margin-right: 10px;
+}
+.ListItem .ListItem__head .ListItem__Title .ListItem__Title--description {
+    margin: 0;
+    font-size: 85%;
+    opacity: .75;
+}
+h1, h2, h3, h4, h5, h6, p, blockquote, pre, dl, dd, ol, ul, form, fieldset, legend, table, th, td, caption, hr {
+    margin: 0;
+    padding: 0;
+}
+
+.ListItem .ListItem__head .ListItem__Title .ListItem__Title--headline {
+    margin: 0;
+}
+
+.ListItem {
+    width: 100%;
+    border-bottom: 1px solid #494949;
+}
+/*----------*/
+
+
+/*Search Accordion*/
+.accordion {
+    margin-top: 10px;
+    border-bottom: 1px solid transparent;
+    transition: border 300ms ease-in-out 150ms, background-color 400ms ease, margin-bottom 300ms linear;
+    will-change: border, background-color, margin-bottom;
+}
+.accordion--open.accordion:not(.accordion--wrapped) {
+    margin-bottom: 30px;
+}
+
+.accordion--open.accordion:not(.accordion--wrapped)>.accordion__head {
+    font-size: 20px;
+}
+
+.accordion .accordion__head {
+    white-space: nowrap;
+}
+
+.accordion__head, .accordion__item {
+    padding: 4px 9px 3px 3px;
+    position: relative;
+    background-color: transparent;
+    transition: border-bottom 300ms ease-in-out 150ms, font-weight 300ms ease-in-out, font-size 300ms ease-in-out;
+    will-change: border-bottom, font-weight, font-size;
+}
+
+.accordion__head, .accordion__item, .accordion__head .arrow, .accordion__item .arrow {
+    cursor: pointer;
+}
+
+.accordion .accordion__head .accordion__head--search--wrapper {
+    overflow: hidden;
+    display: inline-table;
+}
+
+.tapp.color--1 .accordion--wrapped .accordion__head, .tapp.color--1 .accordion--wrapped .accordion__head:before, .tapp.color--1 .accordion .accordion__head, .tapp.color--1 .accordion .accordion__head:before, .tapp.color--1 .content__card .accordion__head, .tapp.color--1 .content__card .accordion__head:before {
+    color: #fff;
+}
+
+.accordion.accordion--open .accordion__head .accordion__head--search--wrapper .accordion__head--search {
+    max-width: 80%;
+}
+
+.accordion .accordion__head .accordion__head--search--wrapper .accordion__head--search {
+    max-width: 100%;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    /* overflow: hidden; */
+    transition: max-width .3s;
+}
+
+.accordion--open.accordion:not(.accordion--wrapped)>.accordion__head {
+    font-size: 20px;
+}
+
+.accordion.accordion--open .accordion__head .Suche {
+    opacity: 1;
+    transform: translateZ(0);
+}
+
+.accordion .accordion__head .Suche {
+    transition: opacity .3s,transform .3s;
+    opacity: 0;
+    transform: translate3d(100%,0,0);
+    position: absolute;
+    top: 4px;
+    right: 9px;
+}
+
+.Suche.Suche--accordion {
+    width: 40%;
+    float: right;
+    position: relative;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-align: start;
+    align-items: flex-start;
+    max-height: 28px;
+}
+
+.Suche {
+    transition: opacity .3s,transform .3s;
+    opacity: 0;
+    transform: translate3d(100%,0,0);
+    position: absolute;
+    top: 4px;
+    right: 9px;    
+}
+.Suche.Suche--accordion input, .Suche.Suche--accordion label i {
+    font-size: 14px!important;
+}
+
+.Suche input {
+    width: 100%;
+    background-color: transparent;
+    border-width: 0 0 1px;
+    border-color: #494949;
+    padding: 4px 8px;
+    border-radius: 0!important;
+}
+
+input {
+    line-height: normal;
+}
+
+button, input, optgroup, select, textarea {
+    color: inherit;
+    font: inherit;
+    margin: 0;
+}
+
+.Suche.Suche--accordion input, .Suche.Suche--accordion label i {
+    font-size: 14px!important;
+}
+
+.Suche label i {
+    opacity: .6;
+}
+
+.fa {
+    display: inline-block;
+    font: normal normal normal 14px/1 FontAwesome;
+    font-size: inherit;
+    text-rendering: auto;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+.accordion__body {
+    overflow: hidden;
+    position: relative;
+    height: auto !important;
+}
+
+.animation__accordion--open, .accordion--open>.accordion__body, .mode-switch.mode-switch--open>.mode-switch__body {
+    transition: max-height 0.5s cubic-bezier(0.5, 0, 1, 0) 0s;
+    will-change: max-height;
+}
+
+.accordion--open>.accordion__body {
+    max-height: 9999px !important;
+}
+
+.accordion__content {
+    padding: 0 9px 9px;
+}
+.tapp.color--1 a, .tapp.color--1 h1, .tapp.color--1 h2, .tapp.color--1 h3, .tapp.color--1 h4, .tapp.color--1 h5, .tapp.color--1 i, .tapp.color--1 ol, .tapp.color--1 p, .tapp.color--1 ul {
+    color: #fff;
+}
+
+
+
+.Suche label {
+    max-height: 28px;
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-align: center;
+    align-items: center;
+}
+
+.accordion__head .arrow:before, .accordion__head:before, .accordion__item .arrow:before, .accordion__item:before {
+    font-family: FontAwesome, sans-serif;
+    content: "\f105";
+    line-height: 24px;
+    font-size: 18px;
+    font-weight: normal;
+    position: relative;
+    top: 1px;
+    margin: 0 8px;
+    -webkit-transform: rotate(0deg);
+    transform: rotate(0deg);
+    transition: -webkit-transform 300ms;
+    transition: transform 300ms;
+    transition: transform 300ms, -webkit-transform 300ms;
+    will-change: transform;
+    display: inline-block;
+    
+}
+
+.Suche.Suche--accordion input, .Suche.Suche--accordion label i {
+    font-size: 14px!important;
+}
+.accordion.accordion--open .accordion__head .Suche {
+    opacity: 1;
+    transform: translateZ(0);
+}
+
+.Suche .Suche--accordion {
+    opacity: 1;
+    transform: translateZ(0);
+}
+
+.Suchen .accordion .accordion__head .accordion__head--search--wrapper {
+    overflow: hidden;
+    display: inline-table;
+}
+
+.accordion--open .searchBody {
+    padding: 0 0 9px;
+}
+/*----------*/
+
+/*Mehr Anzeigen*/
+.right {
+    margin: 10px 0;
+    text-align: right;
+    padding-right: 9px;
+}
+/*----------*/
+
